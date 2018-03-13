@@ -1,0 +1,16 @@
+.mystyle {
+
+    text-decoration: underline;
+  
+}
+
+.size{
+    width:50%;
+    float: left;
+    margin: 5px;
+}
+
+[contenteditable="true"]:focus{
+    border:none;
+    outline:none;
+    }
