@@ -1,0 +1,15 @@
+{
+  "name": "ToDo List",
+  "short_name": "ToDo",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A ToDo list using complex JS and localStorage",
+  "lang": "en-US",
+  "theme_color": "#ff0000",
+    "icons": [{
+   "src": "images/NYT.png",
+   "sizes": "512x512",
+   "type": "image/png"
+ }]
+  }

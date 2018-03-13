@@ -1,5 +1,11 @@
 var array = ["First Item"];
 
+//Notes in regard to localStorage and arrays
+// https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage
+// https://stackoverflow.com/questions/30481516/iframe-in-chrome-error-failted-to-read-localstorage-from-window-access-den
+array = JSON.parse(localStorage.getItem("array"));
+console.log("This is a test for localStorage" + array);
+
 function addToList() {
   var SearchTerm = document.getElementById("searchinput").value;
   array.unshift(SearchTerm);
@@ -11,6 +17,7 @@ function addToList() {
 }
 
 function display(){
+    localStorage.setItem("array", JSON.stringify(array));
     let output = '<div">';
 array.forEach((value, index)=>{
     output += `
@@ -52,6 +59,7 @@ function myFunction2(test2) {
     removeClass.classList.remove("mystyle");
 
     array[test2] = x;
+    localStorage.setItem("array", JSON.stringify(array));
     let output2 = `
  
     <button  onclick="myFunction(${test2})" class="btn btn-primary">Edit</button>
