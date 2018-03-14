@@ -1,6 +1,5 @@
 .mystyle {
-
-    text-decoration: underline;
+    color: red;
   
 }
 
@@ -13,4 +12,14 @@
 [contenteditable="true"]:focus{
     border:none;
     outline:none;
+    overflow: hidden;
     }
+
+    h3{
+        height: 30px;
+    }
+
+.underline{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
