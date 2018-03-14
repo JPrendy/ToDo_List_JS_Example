@@ -16,10 +16,12 @@ console.log(item[0]);
 //application before it will go and get the arrays items.
 item = JSON.parse(localStorage.getItem("item"));
 checkUnderline = JSON.parse(localStorage.getItem("checkUnderline"));
-
-if (checkUnderline[0] == undefined) {
-  localStorage.setItem("item", JSON.stringify(item));
-  localStorage.setItem("checkUnderline", JSON.stringify(checkUnderline));
+console.log(checkUnderline);
+//Don't use checkUnderline[0] here as when we try to retrieve the localstorage it is technically not
+// an array anymore.
+if (checkUnderline == null) {
+    var item = [];
+    var checkUnderline = [];
 }
 
 console.log("This is a test for localStorage " + item);
